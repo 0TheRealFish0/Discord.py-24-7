@@ -1,5 +1,4 @@
 discord
 youtube_dl
 asyncio
-random
 os
