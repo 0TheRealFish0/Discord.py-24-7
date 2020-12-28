@@ -6,7 +6,8 @@ import asyncio
 from random import choice
 import os
 import ffmpeg
-
+import ctypes
+import ctypes.util
 
 youtube_dl.utils.bug_reports_message = lambda: ''
 
