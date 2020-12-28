@@ -6,4 +6,3 @@ ffmpeg
 discord.py[voice]
 colorlog
 pip
-ctypes
