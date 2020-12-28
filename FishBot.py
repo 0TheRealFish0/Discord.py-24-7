@@ -125,7 +125,7 @@ async def remove(ctx, number):
         await ctx.send('Your queue is either **empty** or the index is **out of range**')
         
 @client.command(name='play', help='This command plays songs')
-async def play(ctx):
+async def play(ctx, self):
     global queue
 
     server = ctx.message.guild
@@ -133,6 +133,8 @@ async def play(ctx):
 
     async with ctx.typing():
         player = await YTDLSource.from_url(queue[0], loop=client.loop)
+        if not player.is_connected:
+            await ctx.invoke(self.connect)
         voice_channel.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
 
     await ctx.send('**Now playing:** {}'.format(player.title))
@@ -171,5 +173,7 @@ async def stop(ctx):
 @tasks.loop(seconds=20)
 async def change_status():
     await client.change_presence(activity=discord.Game(choice(status)))
+
+
 
 client.run(os.environ['token'])
