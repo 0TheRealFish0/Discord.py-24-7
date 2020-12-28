@@ -3,3 +3,4 @@ youtube_dl
 asyncio
 PyNaCl
 ffmpeg
+discord.py[voice] ~= 1.4.0
