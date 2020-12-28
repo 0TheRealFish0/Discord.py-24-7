@@ -8,6 +8,8 @@ import os
 import ffmpeg
 import ctypes.util
 
+
+
 youtube_dl.utils.bug_reports_message = lambda: ''
 
 ytdl_format_options = {
@@ -175,4 +177,4 @@ async def change_status():
 
 
 
-client.run(os.environ['token'])
+client.run('NzU3NTc0Mzc4NTgxMDAwMjMy.X2iYHg.8urh4EQaUDfVn7gEBGvp9JgxOBI')
