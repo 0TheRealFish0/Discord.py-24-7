@@ -175,4 +175,4 @@ async def change_status():
 
 
 
-client.run('token')
+client.run(os.environ['token'])
