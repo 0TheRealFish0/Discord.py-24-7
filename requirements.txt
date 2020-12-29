@@ -6,3 +6,4 @@ ffmpeg
 discord.py[voice]==1.5.1
 colorlog
 pip
+requests
