@@ -7,7 +7,7 @@ from random import choice
 import os
 import ffmpeg
 import ctypes.util
-
+import requests
 
 
 youtube_dl.utils.bug_reports_message = lambda: ''
