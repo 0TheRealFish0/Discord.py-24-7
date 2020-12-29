@@ -8,7 +8,7 @@ import os
 import ffmpeg
 import ctypes.util
 import requests
-import httplib
+import httplib2
 
 
 
