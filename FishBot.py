@@ -8,6 +8,9 @@ import os
 import ffmpeg
 import ctypes.util
 import requests
+import httplib
+
+
 
 
 youtube_dl.utils.bug_reports_message = lambda: ''
@@ -23,7 +26,7 @@ ytdl_format_options = {
     'quiet': True,
     'no_warnings': True,
     'default_search': 'auto',
-    'source_address': '192.168.2.107' 
+    'source_address': '127.0.0.1' 
 }
 
 ffmpeg_options = {
